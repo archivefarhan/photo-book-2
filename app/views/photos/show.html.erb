@@ -1,0 +1,9 @@
+<h1>Photo info</h1>
+<h2><%= @photo.name %></h2>
+<p>Image: <img src=<%=@photo.url%>>
+</p>
+<p>Width: <%= @photo.width %></p>
+<p>Height: <%= @photo.height %></p>
+<%= link_to "Edit photo", edit_photo_path(@photo) %>
+<%= link_to "Destroy photo", photo_path(@photo), data: {turbo_method: :delete} %>
+<a href="/photos">Back to all photos</a>

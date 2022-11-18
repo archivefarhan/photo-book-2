@@ -1,0 +1,9 @@
+<h1>All photos</h1>
+<% @photos.each do |photo| %>
+  <h2><%= photo.name %></h2>
+<p>Image: <img src=<%=photo.url%> width = <%photo.width%> height = <%photo.height%>>
+</p>
+<%= link_to "More Info", photo %>
+<% end %>
+
+<%= link_to "New photo", new_photo_path %>
