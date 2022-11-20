@@ -1,9 +1,17 @@
 <h1>All photos</h1>
 <% @photos.each do |photo| %>
-  <h2><%= photo.name %></h2>
-<p>Image: <img src=<%=photo.url%> width = <%photo.width%> height = <%photo.height%>>
-</p>
-<%= link_to "More Info", photo %>
+<div class="row">
+  <div class="col-sm-6">
+<div class="card" style="width: 18rem;">
+  <img src="<%=photo.url%>" class="card-img-top" width = "300px">
+  <div class="card-body">
+    <h5 class="card-title"><%=photo.name%></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn" style="background-color: green"><%= link_to "More Info", photo %></a>
+  </div>
+</div>
+  </div>
+</div>
 <% end %>
-
+<br>
 <%= link_to "New photo", new_photo_path %>
